@@ -1,0 +1,311 @@
+// ...existing code...
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* ...existing code... */
+
+        /* Layout reset */
+        *{box-sizing:border-box}
+        html,body{height:100%}
+        body {
+            margin: 0;
+            background-color: #e6f2fb;
+            display: flex;
+            align-items: flex-start;    /* keep page scollable; container centered horizontally */
+            justify-content: center; /* center horizontal */
+            min-height: 100vh;
+            padding: 32px 16px;
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #222;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+            background: #fff;
+            padding: 28px;
+            box-shadow: 0 6px 22px rgba(10,20,30,0.07);
+            border-radius: 10px;
+        }
+
+        h1{margin:0 0 8px;font-size:28px;text-align:center}
+        h5{margin:0 0 8px;font-size:14px;text-align:center}
+        h2{font-size:18px;margin:18px 0 8px}
+        h3{font-size:16px;margin:12px 0 8px}
+        p{margin:0 0 12px} /* <p> tetap tidak diubah isinya */
+
+        /* center all images inside the container */
+        .container img{
+            display: block;
+            margin: 16px auto;      /* center horizontally */
+            max-width: 100%;
+            height: auto !important; /* override inline fixed heights to keep aspect ratio */
+            border-radius: 8px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+        }
+
+        /* small separators / decorative */
+        .ac { display:flex; justify-content:center; gap:10px; margin:18px 0; }
+        .ac span{ width:8px; height:8px; border-radius:50%; background:#cfcfcf; display:inline-block }
+
+        /* utilities */
+        .pn{margin-bottom:14px}
+        .po{margin-bottom:14px}
+        .pp{padding-top:24px}
+        .pq{padding-bottom:10px}
+
+        @media (max-width:520px){
+            .container{padding:18px}
+            h1{font-size:22px}
+        }
+
+        /* ...existing code... */
+    </style>
+</head>
+<body>
+    <!-- ...existing code... -->
+    <div class="container">
+        <h1>UI/UX Case Study</h1>
+        <h5>by Diva Galih Nayaka</h5>
+        <h2>Persyaratan Produk Awal</h2>
+        
+        <h3>Tujuan Produk</h3>
+        <img src="foto/fotouiux.jpg" alt="Foto UI UX" style="max-width:100%; height:auto;">
+        <p>kami berinisiatif untuk
+            membuat solusi digital yang dapat 
+            membantu para mahasiswa dalam
+            mengatur waktu. Dimana aplikasi 
+            ini dapat mencatat semua kegiatan yang ingin lakukan, memberikan notifikasi 
+            pengingat setidaknya 6 jam sebelum kegiatan dimulai,
+            sehingga mereka tidak lagi lupa dengan semua kegiatan yang akan 
+            mereka kerjakan di esok hari.
+        </p>
+        <h3>Masalah</h3>
+        <p>Permasalahan yang dihadapi adalah para mahasiswa sering kali
+            terlambat mendatangi acara, kelas, lupa mengerjakan tugas,
+            bahkan sampai lupa dengan kegiatan yang akan mereka
+            lakukan di esok hari.
+        </p>
+        <h3>Challenge</h3>
+        <p>
+            Bagaimana merancang sebuah aplikasi yang dapat membantu
+            para mahasiswa dalam mengatur waktu dengan baik,
+            sehingga mereka dapat mengingat semua kegiatan yang
+            akan mereka lakukan di esok hari tanpa merasa terbebani.
+        </p>
+        <h3>Target Pengguna</h3>
+        <p>
+            Mahasiswa aktif yang memiliki kesulitan dalam mengatur
+            waktu dan sering kali lupa dengan kegiatan yang akan
+            mereka lakukan di esok hari.
+        </p>
+        <div class="ac ci pn po pp pq" role="separator">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <img src="foto/empatii.jpg" alt="Foto UI UX 2" style="max-width:100%; height:200px;">
+        <h3>Goal Research</h3>
+        <p>
+            Mencari tahu faktor apa yang membuat mahasiswa sering lupa terhadap 
+            jadwal yang harus mereka lakukan. Mencari cara agar para mahasiswa
+            tidak lupa terhadap kegiatan yang harus mereka lakukan. 
+        </p>
+        <h3>Hypothesis</h3>
+        <ol>
+            <li>
+                Mahasiswa belum terbiasa dengan lingkungan kampus.
+            </li>
+            <li>
+                Mahasiswa suka menunda-nunda tugas sehingga mereka lupa dengan tugas tersebut.
+            </li>
+            <li>
+                Mahasiswa tidak tahu jika besok ada kegiatan yang harus mereka lakukan.
+            </li>
+            <li>
+                Mahasiswa tidak memiliki catatan kegiatan yang harus mereka lakukan.
+            </li>
+            <li>
+                Mahasiswa tidak memiliki pengingat kegiatan.
+            </li>
+            <li>
+                Mahasiswa tidak memiliki aplikasi yang dapat membantu mereka mengatur waktu.
+            </li>
+        </ol>
+        <h3>Persona</h3>
+        <p> 
+            Target dalam aplikasi ini yaitu : <br>
+            <ol>
+            <li>
+                Para mahasiswa yang ingin mengatur waktu mereka agar lebih tertata.
+            </li> 
+            <li>
+                Orang penting yang memiliki jadwal yang padat.
+            </li>
+            </ol>
+            Dengan adanya aplikasi ini, diharapkan dapat 
+            membantu para mahasiswa untuk mencatat semua kegiatan yang ingin mereka lakukan,
+            agar mereka tidak lupa dengan kegiatan tersebut.
+        </p>
+
+        <div class="ac ci pn po pp pq" role="separator">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <img src="foto/define.png" alt="Foto UI UX 2" style="max-width:100%; height:200px;">
+        <h3>Framming the problem, clustering and filtering insight</h3>
+        <p>
+            Saya telah melakukan wawancara terhadap 3 orang mahasiswa/i
+            Telkom University yang berasal dari Bandung, Jakarta dan Medan.<br><br>
+            Dari hasil wawancara tersebut, ternyata dari mereka masih banyak yang 
+            masih terkendala dalam masalah membagi waktu, Berikut detailnya dapat dilihat
+            pada gambar di bawah.
+        </p>
+        <img src="foto/tugas.png" alt="Foto UI UX 2" style="max-width:100%; height:600px;">
+        <h3>Competitive analysis</h3>
+        <p>
+            Setelah melakukan wawancara saya juga melakukan desk Research
+            , untuk mencari tahu apakah sudah pernah ada platform digital 
+            yang menawarkan solusi serupa
+        </p>
+        <img src="foto/journey.png" alt="Foto UI UX 2" style="max-width:100%; height:200px;">
+        <p>
+             Dengan implementasi solusi ini, aplikasi manajemen waktu Anda tidak hanya berfungsi 
+             sebagai kalender digital, tetapi sebagai asisten pribadi yang proaktif dalam membantu
+              mahasiswa mengatasi prokrastinasi dan masalah kelupaan yang spesifik.
+        </p>
+
+        <div class="ac ci pn po pp pq" role="separator">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <img src="foto/Ideate.png" alt="Foto UI UX 2" style="max-width:100%; height:200px;">
+        <h3>Translate idea into Information architecture</h3>
+        <p> 
+            Berikut adalah rancangan information architecture yang saya buat, dimana saya 
+            membuat 1 fokus fitur utama, yaitu Tambah jadwal , yang bertujuan untuk mencatat semua 
+            kegiatan yang ingin di lakukan oleh mahasiswa. Hal ini di lakukan demi kelancaran 
+            semua kegiatan.
+        </p>
+        <img src="foto/alur.png" alt="Foto UI UX 2" style="max-width:100%; height:500px;">
+
+        <h3>Create user flow</h3>
+        <p>
+            Berikut adalah user flow yang saya buat untuk menggambaran proses atau 
+            langkah-langkah yang dilakukan oleh user, untuk mencapai tujuan mereka didalam apliaksi ini.
+            Gambar dibawah adalah salah satu skenario user flow yang saya buat, ketika user 
+            untuk pertama kali daftar pada aplikasi ini, user bisa mencatat semua jadwal kegiatan yang 
+            ingin dia lakukan.
+        </p>
+        <img src="foto/userflow.png" alt="Foto UI UX 2" style="max-width:100%; height:500px;">
+
+        <h3>Wireframing</h3>
+        <p>
+            Selanjutnya ialah tahapan untuk memvisualisasikan semua insight yang telah didapat dari 
+            tahapan-tahapan sebelumnya hingga menjadi suatu tampilan, yang nantinya tampilan wireframe
+             tersebut akan menjadi acuan untuk saya dalam membuat high-fidelity design nya. 
+             Berikut adalah beberapa tampilan wireframe yang telah saya buat:
+        </p>
+        <img src="foto/prototipe.png" alt="Foto UI UX 2" style="max-width:100%; height:500px;">
+        
+        <div class="ac ci pn po pp pq" role="separator">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <img src="foto/imagePrototype.png" alt="Foto UI UX 2" style="max-width:100%; height:500px;">
+        <h3>Show prototype</h3>
+        <p>
+            Pada fase ini saya akan membuat prototype dari mockup yang telah saya buat menggunakan tools Figma.
+             Untuk mencoba prototype silahkan mengunjungi link dibawah ini:
+        </p>
+        <video controls width="640" height="360">
+        <source src="Screen Recording 2025-11-09 193759.mp4" type="video/mp4">
+
+        <source src="Screen Recording 2025-11-09 193759.mp4" type="video/webm">
+
+        Browser Anda tidak mendukung tag video HTML5.
+    </video>
+
+        <div class="ac ci pn po pp pq" role="separator">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <img src="foto/Testing.png" alt="Foto UI UX 2" style="max-width:100%; height:500px;">
+        <!-- masukkan semua konten Anda di dalam .container -->
+         <br>
+         <p>
+            Fase terakhir ini merupakan ujicoba prototype yang telah saya buat
+            ke pengguna dengan situasi yang mirip dengan realita yang akan 
+            dihadapi oleh user yang menggunakan aplikasi ini. Fase ini akan 
+            Memberikan ide-ide baru serta feedback dari pengguna yang dapat membantu saya 
+            untuk mengembangkan aplikasi ini menjadi lebih baik kedepannya.
+         </p><br>
+         <p>
+            Metode yang akan saya gunakan untuk fase ini adalah:<br>
+            <ol>
+                <li>
+                    Testing Prototype : Saya memberikan link prototype figma untuk di gunakan oleh
+                     user, saya tidak melakukan usabillity testing menggunakan maze ataupun meeting 
+                     virtual dikarenakan adanya keterbatasannya waktu.
+                </li>
+                <li>
+                    User Feedback : Saya akan meminta pendapat partisipan, bagaimana pengalaman 
+                    yang partisipan rasakan ketika sedang menggunakan prototype aplikasi tersebut.
+                </li>
+            </ol>
+         </p>
+         <p>
+            Saya telah menguji kepada 3 orang partisipan, untuk mencoba
+             prototype dari awal sampai akhir, untuk melihat apakah ada kendala yang dirasakan ketika
+              menggunakan prototype ini, dan juga untuk melihat bagaimana impresi awal mereka terhadap 
+              solusi design yang saya tawarkan. 
+         </p>
+
+         <h3>Kesimpulan Akhir</h3>
+         <p>
+            Setelah saya melaksanakan testing terhadap 5 partisipan, saya mendapatkan beberapa masukan
+             dari partisipan berdasarkan apa yang mereka alami. Berikut ialah ringkasan mengenai apa saja
+              yang dialami ketika mencoba prototype tersebut.
+         </p>
+         <ol>
+                <li>
+                    Tidak ada warna yang membuat saya jenuh membuka aplikasi ini.
+                </li>
+                <li>
+                    Masih banyak yang tidak tahu cara untuk keluar aplikasi.
+                </li>
+                <li>
+                    Pertisipan tidak tau caranya memberikan feedback pada aplikasinya. 
+                </li>
+            </ol>
+   <br>
+        <p>
+            Dari beberapa feedback dan hasil testing tersebut, saya merasa 
+            aplikasi yang saya bikin masih banyak yang harus di tambahkan
+            seperti fitur logout, dan feedback. Selain itu saya harus memikirkan
+            warna yang cocok untuk aplikasi yang saya buat, saya ingin memberikan 
+            warna yang dapat memberikan kepuasan bagi pengguna aplikasi.
+        </p><br>
+        <p> 
+            Demikian proses design yang telah saya lakukan, saya menyadari bahwa design yang saya 
+            tawarkan masih belum sempurna, masih terdapat banyak kekurangan, namun oleh karena itu proses
+             development harus selalu berlanjut, agar dapat melakukan iterasi-iterasi berikutnya, dan dapat
+              terus mengembangkan aplikasi Kelas Kita menjadi makin baik lagi kedepannya.
+        </p>
+ </div>
+</body>
+</html>
+// ...existing code...
